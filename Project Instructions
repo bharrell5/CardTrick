@@ -1,0 +1,105 @@
+Project 2 - Card Trick 
+
+Write a program to perform the following the following card trick.  The program 
+must deal out the cards in three columns, row by row. 
+  
+        Ace of Hearts    Jack of Spades       7 of Clubs
+          2 of Spades       2 of Spades       3 of Spades
+          3 of Diamonds     4 of Diamonds    10 of Hearts
+         10 of Clubs        8 of Hearts       9 of Diamonds
+       Jack of Hearts       9 of Clubs     Jack of Clubs
+      Queen of Clubs    Queen of Hearts    King of Diamonds
+          7 of Diamonds  King of Spades       6 of clubs
+
+The program must then prompt the user to pick which column his/her card is in.  
+Your program should then pick up that column second, that is: pick up either 
+remaining column first, the selected column, and then the final column. 
+In the example above, assume that the selected card is the Ace of Hearts.  The 
+user would select column 0.  Your program should pick up column 1, then column 
+0, and finally column 2.  Then it must redeal the cards, which should look like: 
+  
+       Jack of Spades      2 of Spades       4 of Diamonds
+          8 of Hearts      9 of Clubs    Queen of Hearts
+       King of Spades    Ace of Hearts       2 of Spades
+          3 of Diamonds   10 of Clubs     Jack of Hearts
+      Queen of Clubs       7 of Diamonds     7 of Clubs
+          3 of Spades     10 of Hearts       9 of Diamonds
+       Jack of Clubs    King of Diamonds     6 of Clubs
+
+Your program should repeat this process twice more (selecting the column, 
+picking up and redealing).  Then the program must deal out the first ten cards 
+in the deck and declare the eleventh card as the secret card. 
+  
+Sample Output of the Trick: 
+  
+   Column 0           Column 1          Column 2 
+======================================================= 
+    9 of Clubs         7 of Clubs        8 of Hearts 
+    6 of Spades     Jack of Clubs     King of Spades 
+ Jack of Hearts        4 of Diamonds     8 of Diamonds 
+    6 of Hearts     Jack of Diamonds     8 of Spades 
+    8 of Clubs      King of Clubs        9 of Hearts 
+    4 of Hearts      Ace of Clubs      Ace of Spades 
+   10 of Diamonds      5 of Spades       3 of Diamonds 
+  
+Which column is your card in (0, 1, or 2)?: 1 
+  
+   Column 0           Column 1          Column 2 
+======================================================= 
+    9 of Clubs        6 of Spades     Jack of Hearts 
+    6 of Hearts       8 of Clubs         4 of Hearts 
+   10 of Diamonds     7 of Clubs      Jack of Clubs 
+    4 of Diamonds  Jack of Diamonds   King of Clubs 
+  Ace of Clubs        5 of Spades        8 of Hearts 
+ King of Spades       8 of Diamonds      8 of Spades 
+    9 of Hearts     Ace of Spades        3 of Diamonds 
+  
+Which column is your card in (0, 1, or 2)?: 2 
+  
+   Column 0           Column 1          Column 2 
+======================================================= 
+    6 of Spades        8 of Clubs        7 of Clubs 
+ Jack of Diamonds      5 of Spades       8 of Diamonds 
+  Ace of Spades     Jack of Hearts       4 of Hearts 
+ Jack of Clubs      King of Clubs        8 of Hearts 
+    8 of Spades        3 of Diamonds     9 of Clubs 
+    6 of Hearts       10 of Diamonds     4 of Diamonds 
+  Ace of Clubs      King of Spades       9 of Hearts 
+  
+Which column is your card in (0, 1, or 2)?: 0 
+Finding secret card... 
+   8 of Clubs 
+   5 of Spades 
+Jack of Hearts 
+King of Clubs 
+   3 of Diamonds 
+  10 of Diamonds 
+King of Spades 
+   6 of Spades 
+Jack of Diamonds 
+ Ace of Spades 
+Your secret card is: Jack of Clubs 
+
+Program Requirements 
+Your program must generate its own random deck of cards using the following technique:
+•	generate a random integer for each card 
+•	display a string value for each card ("Ace of Diamonds") 
+•	use the rand() function to generate integer card values 
+•	use the srand(time(0)) command (only once at the beginning of the program) to generate a truly random deck once the program has been tested and runs properly. 
+ 
+Each value must be converted to the format <rank> of <suit> as done in the example 
+above.  Whenever your program displays the cards they must line up as they do 
+above, on the word "of". 
+
+Your program must deal the cards out by row and pick them up by column (3 times 
+to make it work properly). 
+
+Your program must ask the player is he/she wants to printout the entire deck 
+before playing.  Each card must be printed out formatted as above.
+
+Your program must ask the player if he/she wants to play again, and continue playing as many times as the player wants. 
+
+The program must ask the player for his/her name and refer to the player by name 
+throughout the playing of the game. 
+
+Your program code must be logically organized using functions.
